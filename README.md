@@ -12,27 +12,32 @@ $ npm install mi-angular-color-picker --save
 
 Copy css/colorpicker.css and js/mi-angular-color-picker.js. Add a dependency to your app, for instance:
 
+
+```
 angular.module('myApp', ['mi.ColorPicker'])
-
-
-## Local Webserver
-
-Running local and open [http://localhost:5555/](http://localhost:5555/)
-
-```sh
-$ npm run start
 ```
 
+## Examples
+in your formly model:
 
-## Tests
+    {
+         key: 'backgroundColor',
+         type: 'colorpicker',
+         defaultValue: '#961c1c',
+         templateOptions: {
+         label: $translate.instant('customize.form.backgroundColor.label'),
+         placeholder: $translate.instant('customize.form.backgroundColor.placeholder'),
+         required: true,
+         colorPickerFormat: '\'hex\'',
+         colorPickerAlpha: true,
+         colorPickerPos: '\'top left\'',
+         colorPickerSwatchBootstrap: false
+         },
+         validation: {
+           show: true
+         }
+    }
 
-coming soon ...
-
-Trigger unit test with [npm](https://www.npmjs.com/)
-
-```sh
-$ npm run test
-```
 
 
 ## Contributing

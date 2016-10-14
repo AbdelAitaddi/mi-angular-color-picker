@@ -2,7 +2,7 @@
   "name": "mi-angular-color-picker",
   "version": "0.2.0",
   "description": "The color picker by formly for AngularJS 1",
-  "main": "dist/mi-angular-bitdash-player.js",
+  "main": "dist/mi-angular-color-picker.js",
   "scripts": {
     "prebuild:js": "npm run jscs && npm run jshint",
     "build": "npm run build:js && npm run build:js-min",

@@ -4,7 +4,6 @@
   "description": "The color picker by formly for AngularJS 1",
   "main": "dist/mi-angular-bitdash-player.js",
   "scripts": {
-    "postinstall": "npm run build",
     "prebuild:js": "npm run jscs && npm run jshint",
     "build": "npm run build:js && npm run build:js-min",
     "build:js": "webpack --config webpack.config.js",

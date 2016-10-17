@@ -1,7 +1,7 @@
 {
   "name": "mi-angular-color-picker",
   "version": "0.3.0",
-  "description": "The color picker by formly for AngularJS 1",
+  "description": "Native AngularJS colorpicker directive with formly",
   "main": "dist/mi-angular-color-picker.js",
   "scripts": {
     "prebuild:js": "npm run jscs && npm run jshint",

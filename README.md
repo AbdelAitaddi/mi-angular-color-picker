@@ -1,4 +1,4 @@
-# mi-angular-color-picker
+# mi-angular-color-picker (with Formly)
 
 ## Installation
 
@@ -14,30 +14,33 @@ Copy css/colorpicker.css and js/mi-angular-color-picker.js. Add a dependency to 
 
 
 ```
+# app.js
+require('mi-angular-color-picker');
 angular.module('myApp', ['mi.ColorPicker'])
 ```
 
-## Examples
-in your formly model:
+## Examples with Angular-formly: 
+in your controller model:
 
-    {
-         key: 'backgroundColor',
-         type: 'colorpicker',
-         defaultValue: '#961c1c',
-         templateOptions: {
-         label: $translate.instant('customize.form.backgroundColor.label'),
-         placeholder: $translate.instant('customize.form.backgroundColor.placeholder'),
-         required: true,
-         colorPickerFormat: '\'hex\'',
-         colorPickerAlpha: true,
-         colorPickerPos: '\'top left\'',
-         colorPickerSwatchBootstrap: false
-         },
-         validation: {
-           show: true
-         }
-    }
-
+    vm.fields = [
+          {
+             key: 'color1',
+             type: 'colorpicker',
+             defaultValue: '#961c1c',
+             templateOptions: {
+             label: 'ColorPicker',
+             placeholder: 'ColorPicker',
+             required: true,
+             colorPickerFormat: '\'hex\'',
+             colorPickerAlpha: true,
+             colorPickerPos: '\'top left\'',
+             colorPickerSwatchBootstrap: false
+             },
+             validation: {
+               show: true
+             }
+          }
+    ];
 
 
 ## Contributing

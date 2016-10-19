@@ -39,7 +39,8 @@ module.exports = angular.module(ModuleName, requires)
       template: '<div class="input-group">' +
       '<input type="text" colorpicker class="form-control" colorpicker-position="top" ng-model="model[options.key]" ' +
       'placeholder="Recipient\'s username" aria-describedby="basic-addon2">' +
-      '<span class="input-group-addon" style="background-color:{{model.backgroundColor}}" id="basic-addon2"></span>' +
+      '<span class="input-group-addon mi-color-picker" style="background-color:{{model.backgroundColor}}" ' +
+      'id="basic-addon2"></span>' +
       '</div>',
       wrapper: ['bootstrapLabel', 'bootstrapHasError'],
       defaultOptions: {

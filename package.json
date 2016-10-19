@@ -2,10 +2,11 @@
   "name": "mi-angular-color-picker",
   "version": "0.4.0",
   "description": "Native AngularJS colorpicker directive with formly",
-  "main": "dist/mi-angular-color-picker.js",
+  "main": "dist/js/mi-angular-color-picker.js",
   "scripts": {
-    "prebuild:js": "npm run jscs && npm run jshint",
-    "build": "npm run build:js && npm run build:js-min",
+    "prebuild": "mkdir -p dist/css/",
+    "build": "npm run jscs && npm run jshint && npm run build:css && npm run build:js && npm run build:js-min",
+    "build:css": "lessc --strict-math='on' --autoprefix='last 2 versions,ie 9' src/media/less/style.less dist/css/colorpicker.css && cleancss --source-map -o dist/css/colorpicker.min.css dist/css/colorpicker.css",
     "build:js": "webpack --config webpack.config.js",
     "build:js-min": "webpack --config webpack.min.config.js",
     "jscs": "jscs ./src ./test",
@@ -29,12 +30,13 @@
     "url": "https://github.com/krimovish/mi-angular-color-picker/issues"
   },
   "homepage": "https://github.com/krimovish/mi-angular-color-picker#readme",
-  "dependencies": {
-    "angular-bootstrap-colorpicker": "^3.0.19"
-  },
+  "dependencies": {},
   "devDependencies": {
     "angular": "^1.4.9",
+    "angular-bootstrap-colorpicker": "^3.0.25",
     "angular-mocks": "^1.4.9",
+    "clean-css": "^3.4.8",
+    "fs-extra": "^0.26.2",
     "istanbul-instrumenter-loader": "^0.2.0",
     "jasmine-core": "^2.3.4",
     "jscs": "^3.0.0",
@@ -48,6 +50,8 @@
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-webpack": "^1.7.0",
+    "less": "^2.5.3",
+    "less-plugin-autoprefix": "^1.5.1",
     "ng-annotate-webpack-plugin": "^0.1.2",
     "phantomjs-prebuilt": "^2.1.4",
     "webpack": "^1.12.9"

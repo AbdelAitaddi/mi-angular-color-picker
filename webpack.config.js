@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var path = require('path');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var srcPath = path.resolve(__dirname, 'src', 'index.js');
-var dstPath = path.resolve(__dirname, 'dist');
+var dstPath = path.resolve(__dirname, 'dist', 'js');
 
 module.exports = {
   entry: srcPath,

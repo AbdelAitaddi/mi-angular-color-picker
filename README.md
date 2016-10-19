@@ -1,4 +1,4 @@
-# mi-angular-color-picker (with Formly)
+# mi-angular-color-picker (for Angular-formly)
 
 ## Installation
 
@@ -24,7 +24,7 @@ in your controller model:
 
     vm.fields = [
           {
-             key: 'color1',
+             key: 'backgroundColor',
              type: 'colorpicker',
              defaultValue: '#961c1c',
              templateOptions: {

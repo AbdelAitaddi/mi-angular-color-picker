@@ -36,11 +36,10 @@ module.exports = angular.module(ModuleName, requires)
 
     formlyConfig.setType({
       name: 'colorpicker',
-      template: '<div class="input-group">' +
-      '<input type="text" colorpicker class="form-control" colorpicker-position="top" ' +
-      'ng-model="model[options.key]" aria-describedby="basic-addon2">' +
-      '<span class="input-group-addon mi-color-picker" style="background-color:{{model.backgroundColor}}" ' +
-      'id="basic-addon2"></span>' +
+      template: '<div class="input-group" colorpicker colorpicker-position="top" ng-model="model[options.key]">' +
+      '<input type="text"  class="form-control" aria-describedby="basic-addon2" ng-model="model[options.key]">' +
+      '<span class="input-group-addon mi-color-picker"  ' +
+      'style="background-color:{{model.backgroundColor}}" id="basic-addon2"></span>' +
       '</div>',
       wrapper: ['bootstrapLabel', 'bootstrapHasError'],
       defaultOptions: {
